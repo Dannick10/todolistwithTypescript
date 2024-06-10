@@ -7,9 +7,10 @@ import styles from './taskList.module.css'
 interface Props {
   taskListArray: Itask[]
   handleDelete(id: number): void
+  handleedit():void
 }
 
-const TaskList = ({taskListArray, handleDelete}: Props) => {
+const TaskList = ({taskListArray, handleDelete, handleedit}: Props) => {
   return (
     <>  
   {taskListArray.length > 0 ? (
@@ -20,7 +21,7 @@ const TaskList = ({taskListArray, handleDelete}: Props) => {
           <p>Dificuldade: {test.difficulty}</p>
           </div>
           <div className={styles.actions}>
-          <i className="fa-solid fa-pencil"></i>
+          <i className="fa-solid fa-pencil" onClick={() => handleedit()}></i>
           <i className="fa-solid fa-trash" onClick={() => {handleDelete(test.id)}}></i>
           </div>
         </div>

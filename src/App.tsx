@@ -22,6 +22,19 @@ function App() {
    )
   }
 
+  const hiderorShowmodal = (display: boolean) => {
+    const modal =document.querySelector('#modal')
+    if(display) {
+      modal!.classList.remove('hide')
+    } else {
+      modal!.classList.add('hide')
+    }
+  }
+
+  const editTask = ():void => {
+    hiderorShowmodal(true)
+  }
+
   return (
     <>
       <div>
@@ -36,7 +49,7 @@ function App() {
           <div>
             <h2>Suas tarefas:</h2>
             <p>listas</p>
-            <TaskList taskListArray={tasklistArray} handleDelete={deleteTask}/>
+            <TaskList taskListArray={tasklistArray} handleDelete={deleteTask} handleedit={editTask}/>
           </div>
       </main>
       <Footer />
