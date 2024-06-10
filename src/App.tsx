@@ -6,8 +6,11 @@ import Footer from './components/Footer'
 import Taskform from './components/Taskform'
 import TaskList from './components/TaskList'
 
+import {Itask} from './interfaces/Task'
+
 function App() {
   const [count, setCount] = useState(0)
+
 
   return (
     <>
