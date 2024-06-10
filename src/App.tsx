@@ -11,6 +11,7 @@ import {Itask} from './interfaces/Task'
 function App() {
   const [count, setCount] = useState(0)
 
+  const [tasklistArray, setTaskListArray] = useState<Itask[]>([])
 
   return (
     <>
@@ -19,7 +20,8 @@ function App() {
       <main className="main">
           <div>
             <h2>O que voçê vai fazer?</h2>
-            <Taskform btnText='Criar tarefa' />
+            <Taskform btnText='Criar tarefa' tasklistArray
+            ={tasklistArray} setTaskListArray={setTaskListArray} />
           </div>
           <div>
             <h2>Suas tarefas:</h2>
