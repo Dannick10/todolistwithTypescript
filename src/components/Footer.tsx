@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from './Footer.module.css'
 
 type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <footer>
+    <footer className={styles.footer}>
     <p>
       <span>React + ts todo</span> @2024
     </p>
