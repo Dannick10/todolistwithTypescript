@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Taskform from './components/Taskform'
 import TaskList from './components/TaskList'
+import Modal from './components/Modal'
 
 import {Itask} from './interfaces/Task'
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <div>
+      <Modal/>
       <Header />
       <main className="main">
           <div>
